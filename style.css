@@ -1,0 +1,114 @@
+Button {
+    -fx-text-fill: aliceblue;
+    -fx-cursor: hand;
+    -fx-background-color: #24003b;
+}
+
+Button:hover{
+    -fx-background-color: #46597c;
+}
+
+.moviesGrid {
+    -fx-vgap: 90;
+    -fx-hgap: 30;
+}
+
+.movie-pane {
+    -fx-padding: 2px 2px 5px 2px;
+    -fx-alignment: center;
+    -fx-border-width: 4;
+    -fx-border-radius: 10;
+    -fx-border-color: lightsteelblue;
+    -fx-border-style: dashed;
+
+}
+.film-title {
+    -fx-font-size: 21;
+    -fx-font-weight: 800;
+    -fx-pref-height: 30;
+    -fx-pref-width: 310;
+    -fx-padding: 8px 0;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+}
+
+.film-btn {
+    -fx-pref-height: 30;
+    -fx-fit-to-width: true;
+    -fx-font-size: 24;
+    -fx-text-fill: aliceblue;
+    -fx-font-weight: 800;
+    -fx-pref-width: 310;
+    -fx-background-radius: 20;
+}
+
+ImageView {
+}
+
+.film-image {
+-fx-border-radius: 10px;
+}
+
+/*seatShowtime
+ */
+.rev-gridPane {
+    -fx-border-color: lightsteelblue;
+
+    -fx-padding: 10px;
+    -fx-vgap: 30;
+    -fx-border-width: 0px 0px 2px 0px;
+    -fx-border-style: dashed;
+}
+
+.showTime-gridpane {
+    -fx-border-color: lightsteelblue;
+    -fx-padding:  8;
+    -fx-vgap: 20;
+    -fx-hgap: 25;
+    -fx-border-width: 0px 0px 5px 0px;
+    -fx-border-style: dashed;
+
+    -fx-font-size: 21;
+    -fx-font-weight: 800;
+}
+.show-label, re-label {
+    -fx-wrap-text: true;
+    -fx-text-alignment: left;
+}
+.show-label11  {
+    -fx-padding: 0 0 0 50;
+}
+.rev-label00 {
+    -fx-wrap-text: true;
+
+}
+.rev-gridPane {
+    -fx-border-color: lightsteelblue;
+    -fx-padding:  8;
+    -fx-vgap: 15;
+    -fx-hgap: 0;
+    -fx-border-width: 0px 0px 5px 0px;
+    -fx-border-style: dashed;
+
+    -fx-font-size: 21;
+    -fx-font-weight: 800;
+}
+
+
+.seat-button {
+   -fx-background-radius:  20 20 2 2;
+    -fx-border-width: 1px;
+    -fx-border-color: lightslategray;
+    -fx-border-radius: 20 20 2 2
+
+}
+.seat-button-booked {
+    -fx-font-size: 27;
+    -fx-font-weight: 900;
+}
+.seat-button-couple {
+    -fx-padding:    10 10 10 10;
+    -fx-background-radius:  30 30 2 2;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="moviebookingapp.controllers.showtimeseat.ShowtimeseatController">
+   <children>
+      <Pane fx:id="rootPane" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0">
+         <children>
+            <Pane layoutX="367.0" layoutY="88.0" prefHeight="675.0" prefWidth="787.0" style="-fx-border-color: grey; -fx-border-width: 3;">
+               <children>
+                  <Pane layoutX="45.0" layoutY="29.0" prefHeight="37.0" prefWidth="683.0" style="-fx-background-color: #333; -fx-border-radius: 50px; -fx-border-width: 3;">
+                     <children>
+                        <Text fill="WHITE" layoutX="286.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONITOR">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <effect>
+                        <Reflection fraction="0.68" topOpacity="0.27" />
+                     </effect>
+                  </Pane>
+                  <Pane layoutX="246.0" layoutY="591.0" prefHeight="45.0" prefWidth="40.0" style="-fx-background-color: #ff8282; -fx-background-radius: 20 20 0 0;">
+                     <children>
+                        <Text fill="WHITE" layoutX="13.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="27.0" />
+                           </font>
+                        </Text>
+                     </children></Pane>
+                  <Pane layoutX="383.0" layoutY="590.0" prefHeight="45.0" prefWidth="40.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 20 20 0 0;" />
+                  <Text layoutX="234.0" layoutY="654.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Booked">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="365.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Standard">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <GridPane fx:id="gridPaneFSeat" gridLinesVisible="true" hgap="17.0" layoutX="14.0" layoutY="143.0" prefHeight="404.0" prefWidth="727.0" style="-fx-border-width: 5;" vgap="12.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                  <Text layoutX="90.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choosing">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Pane layoutX="110.0" layoutY="591.0" prefHeight="45.0" prefWidth="40.0" style="-fx-background-color: #00b5ef; -fx-background-radius: 20 20 0 0;" />
+                  <Pane layoutX="2.0" layoutY="573.0" prefHeight="6.0" prefWidth="787.0" style="-fx-background-color: grey;" />
+                  <Pane layoutX="642.0" layoutY="588.0" prefHeight="50.0" prefWidth="46.0" style="-fx-background-color: pink; -fx-background-radius: 20 20 0 0;" />
+                  <Pane layoutX="512.0" layoutY="590.0" prefHeight="45.0" prefWidth="40.0" style="-fx-background-color: yellow; -fx-background-radius: 20 20 0 0; -fx-border-width: 1; -fx-border-color: lightslategray; -fx-border-radius: 20 20 2 2;" />
+                  <Text layoutX="518.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIP">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="635.0" layoutY="655.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Couple">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <GridPane alignment="CENTER" layoutX="756.0" layoutY="143.0" prefHeight="404.0" prefWidth="22.0" vgap="13.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="C" wrappingWidth="28.7666015625" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" wrappingWidth="13.666748046875">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="B" wrappingWidth="22.365966796875" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="E" wrappingWidth="28.7666015625" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="E" wrappingWidth="28.7666015625" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="D" wrappingWidth="28.7666015625" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="28.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </Pane>
+            <Pane layoutX="60.0" layoutY="88.0" prefHeight="675.0" prefWidth="311.0" style="-fx-border-color: grey; -fx-border-width: 5px;">
+               <children>
+                  <ScrollPane fx:id="scrollPane" layoutX="-6.0" prefHeight="675.0" prefWidth="317.0" style="-fx-border-color: grey; -fx-border-width: 3;">
+                     <content>
+                        <AnchorPane prefHeight="60.0" prefWidth="314.0" style="-fx-border-color: grey; -fx-border-width: 0 0 2 0;">
+                           <children>
+                              <Label layoutX="63.0" layoutY="7.0" prefHeight="48.0" prefWidth="193.0" text="Schedule &amp; Theater" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </Pane>
+            <Hyperlink fx:id="backBtn" layoutX="60.0" layoutY="27.0" onAction="#backToMovieList" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: #2D3648;" text="&lt;&lt; Back To List" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Hyperlink>
+            <ToggleButton fx:id="lightMode" layoutX="1288.0" layoutY="19.0" mnemonicParsing="false" onAction="#setLightMode" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #D9D9D9;" text="☀">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </ToggleButton>
+            <ToggleButton fx:id="darkMode" layoutX="1228.0" layoutY="19.0" mnemonicParsing="false" onAction="#setDarkMode" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #D9D9D9;" text="🌙">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </ToggleButton>
+            <Button fx:id="logOutBtn" layoutX="1397.0" layoutY="19.0" mnemonicParsing="false" onAction="#logout" prefHeight="50.0" prefWidth="117.0" style="-fx-background-color: #2D3648;" text="LogOut " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="paymentBtn" layoutX="1364.0" layoutY="806.0" mnemonicParsing="false" onAction="#gotoPayment" style="-fx-background-color: #2D3648;" text="Food &amp; Drink &gt;&gt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#686565" />
+               </effect>
+            </Button>
+            <Pane layoutX="1151.0" layoutY="88.0" prefHeight="675.0" prefWidth="363.0" style="-fx-border-color: grey; -fx-border-width: 3;">
+               <children>
+                  <ScrollPane fx:id="bookedReservationPane" layoutX="3.0" layoutY="62.0" prefHeight="540.0" prefWidth="357.0" />
+                  <AnchorPane layoutY="601.0" prefHeight="78.0" prefWidth="363.0" style="-fx-border-color: grey; -fx-border-width: 2 0 0 0;">
+                     <children>
+                        <Label layoutX="7.0" layoutY="13.0" prefHeight="48.0" prefWidth="60.0" text="Total:" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="totalPrice" fontSmoothingType="LCD" layoutX="83.0" layoutY="48.0" smooth="false" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-stroke-width: 5px;" text="0đ" wrappingWidth="168.5673828125">
+                           <font>
+                              <Font name="System Bold Italic" size="22.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="234.0" layoutY="4.0" prefHeight="71.0" prefWidth="4.0" style="-fx-background-color: grey;" />
+                        <Text fx:id="ticketQtyText" layoutX="245.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0  Ticket(s)" wrappingWidth="117.0">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="62.0" prefWidth="363.0" style="-fx-border-color: grey;">
+                     <children>
+                        <RadioButton fx:id="childRadio" layoutX="207.0" layoutY="18.0" mnemonicParsing="false" text="Children">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="userType" />
+                           </toggleGroup>
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton fx:id="adultRadio" layoutX="51.0" layoutY="17.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="92.0" selected="true" text="Adult" toggleGroup="$userType">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </Pane>
+            <Label layoutX="1039.0" layoutY="27.0" prefHeight="48.0" prefWidth="64.0" text="Staff :" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Text fx:id="staffName" layoutX="1114.0" layoutY="59.0" strokeType="OUTSIDE" style="-fx-stroke-width: 5px;" wrappingWidth="103.5673828125">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Text>
+      <!--    <Button fx:id="seatButton" layoutX="8.0" layoutY="8.0" minHeight="50" minWidth="50" text="Seat">-->
+      <!--        <font>-->
+      <!--            <Font size="12.0" />-->
+      <!--        </font>-->
+      <!--    </Button>-->
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
