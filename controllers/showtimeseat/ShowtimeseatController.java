@@ -13,6 +13,7 @@ import javafx.scene.layout.*;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
+import moviebookingapp.controllers.FoodDrinkController;
 import moviebookingapp.controllers.LoginFormController;
 import moviebookingapp.controllers.MovieListController;
 import moviebookingapp.dao.BookingReservationDAO;
@@ -48,7 +49,7 @@ public class ShowtimeseatController implements Initializable {
     public RadioButton childRadio;
     public RadioButton adultRadio;
     public ToggleGroup userType;
-    public Button paymentBtn;
+    public Button foodDrinkBtn;
     public Hyperlink backBtn;
     public ToggleButton lightMode;
     public ToggleButton darkMode;
@@ -99,7 +100,6 @@ public class ShowtimeseatController implements Initializable {
                     // Add ColumnConstraints to the GridPane
                     grid_pane.getColumnConstraints().addAll(column1, column2);
                 }// styling block
-
 
                 reservationGridPaneList.add(grid_pane);
 
@@ -409,6 +409,8 @@ public class ShowtimeseatController implements Initializable {
                                         // do nothing skip rendering the  seat
                                         gridPaneFSeat.setRowIndex(button, row+1);
                                         gridPaneFSeat.setColumnIndex(button, 2*col-10);
+                                        button.setVisible(false);
+                                        button.setDisable(true);
                                     }
                                     else{
                                         gridPaneFSeat.setRowIndex(button, row+1);
@@ -591,43 +593,6 @@ public class ShowtimeseatController implements Initializable {
         }
         return gridPane;
     }
-    public void setLightMode(ActionEvent actionEvent) {
-    }
-    public void setDarkMode(ActionEvent actionEvent) {
-    }
-    public void backToMovieList(ActionEvent actionEvent) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../../fxml/moviecinema.fxml"));
-            Parent root = loader.load();
-            currentStage.setTitle("Movies Cinema");
-            Scene scene = new Scene(root, 1600, 900 );
-            // Load the CSS file
-            scene.getStylesheets().add(getClass().getResource("/moviebookingapp/style.css").toExternalForm());
-            currentStage.setScene(scene);
-            MovieListController movieListController = loader.getController();
-            movieListController.setStage(currentStage);
-            currentStage.show();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void gotoPayment (ActionEvent actionEvent) {
-        try{
-            new SeatDAO().update();
-            new BookingReservationDAO().delete();
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("../../fxml/bookingSucess/bookingSucess.fxml"));
-            Parent root = loader.load();
-            Stage currentStage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            currentStage.setTitle("Payment & Invoice");
-            currentStage.setScene(new Scene(root, 1600, 900));
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-
     public void removeBookingAndPane(Seat seat, List<GridPane> list) {
         int seat_id = seat.getSeat_id();
         new BookingReservationDAO().delete((seat_id));
@@ -647,7 +612,6 @@ public class ShowtimeseatController implements Initializable {
         booking_content.getChildren().addAll(list);
         bookedReservationPane.setContent(booking_content);
     }
-
     public void addBookingAndPane(Seat seat, ShowTime showtime, List<GridPane> list, int ticket_price) {
         BookingReservation re = new BookingReservation(
                 movie.getId(),
@@ -697,7 +661,49 @@ public class ShowtimeseatController implements Initializable {
         booking_content.getChildren().addAll(list);
         bookedReservationPane.setContent(booking_content);
     }
+    public void gotoFoodDrink (ActionEvent event) {
+        try{
+//            new SeatDAO().update();
+//            new BookingReservationDAO().delete();
 
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../../fxml/food&drink.fxml"));
+            Parent root = loader.load();
+            FoodDrinkController foodDrinkController = loader.getController();
+
+            Stage currentStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            foodDrinkController.setStage(currentStage, movie);
+
+            currentStage.setTitle("Food & Drink");
+            Scene scene = new Scene(root, 1600, 900 );
+            // Load the CSS file
+            scene.getStylesheets().add(getClass().getResource("/moviebookingapp/style.css").toExternalForm());
+            currentStage.setScene(scene);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void setLightMode(ActionEvent actionEvent) {
+    }
+    public void setDarkMode(ActionEvent actionEvent) {
+    }
+    public void backToMovieList(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../../fxml/moviecinema.fxml"));
+            Parent root = loader.load();
+            currentStage.setTitle("Movies Cinema");
+            Scene scene = new Scene(root, 1600, 900 );
+            // Load the CSS file
+            scene.getStylesheets().add(getClass().getResource("/moviebookingapp/style.css").toExternalForm());
+            currentStage.setScene(scene);
+            MovieListController movieListController = loader.getController();
+            movieListController.setStage(currentStage);
+            currentStage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     public void logout(ActionEvent actionEvent) {
         try {
             // Create a confirmation dialog
@@ -712,7 +718,10 @@ public class ShowtimeseatController implements Initializable {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("../../fxml/loginform.fxml"));
                         Parent root = loader.load();
                         currentStage.setTitle("Movies Cinema");
-                        currentStage.setScene(new Scene(root, 1600, 900));
+                        Scene scene = new Scene(root, 1600, 900);
+                        scene.getStylesheets().add(getClass().getResource("/moviebookingapp/style.css").toExternalForm());
+
+                        currentStage.setScene(scene);
                         LoginFormController loginFormController = loader.getController();
                         loginFormController.setStage(currentStage);
                         currentStage.show();
@@ -722,12 +731,10 @@ public class ShowtimeseatController implements Initializable {
                     e.printStackTrace();
                 }
             });
-
-
-
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
 
-        }
+
 }

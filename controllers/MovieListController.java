@@ -103,10 +103,13 @@ public class MovieListController implements Initializable {
             confirmationDialog.showAndWait().ifPresent(response -> {
                 try{
                     if (response == ButtonType.OK) {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/loginform.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("../../fxml/loginform.fxml"));
                         Parent root = loader.load();
                         currentStage.setTitle("Movies Cinema");
-                        currentStage.setScene(new Scene(root, 1600, 900));
+                        Scene scene = new Scene(root, 1600, 900);
+                        scene.getStylesheets().add(getClass().getResource("/moviebookingapp/style.css").toExternalForm());
+
+                        currentStage.setScene(scene);
                         LoginFormController loginFormController = loader.getController();
                         loginFormController.setStage(currentStage);
                         currentStage.show();
@@ -116,13 +119,10 @@ public class MovieListController implements Initializable {
                     e.printStackTrace();
                 }
             });
-
-
-
         } catch (Exception e){
             e.printStackTrace();
         }
-
     }
+
 
 }

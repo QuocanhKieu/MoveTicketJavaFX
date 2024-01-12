@@ -29,24 +29,27 @@
             </AnchorPane>
         </content>
       </ScrollPane>
-      <Text layoutX="666.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phim Đang Chiếu">
+      <Text layoutX="666.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOW PLAYING">
          <font>
             <Font name="System Bold" size="33.0" />
          </font>
       </Text>
-      <Button layoutX="1489.0" layoutY="31.0" mnemonicParsing="false" onAction="#logout" styleClass="logout-button" text="LogOut">
+      <Button layoutX="1400.0" layoutY="30.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #2D3648;" styleClass="logout-button" text="LogOut" textFill="WHITE">
          <font>
-            <Font name="System Bold Italic" size="20.0" />
+            <Font name="System Bold Italic" size="22.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Button>
-      <Text fx:id="staffName" layoutX="1353.0" layoutY="66.0" strokeType="OUTSIDE" text="df" wrappingWidth="120.23405456542969">
+      <Text fx:id="staffName" layoutX="1279.0" layoutY="60.0" strokeType="OUTSIDE" text="user" wrappingWidth="120.23405456542969">
          <font>
-            <Font size="20.0" />
+            <Font name="System Bold" size="23.0" />
          </font>
       </Text>
-      <Label layoutX="1233.0" layoutY="33.0" prefHeight="48.0" prefWidth="120.0" text="Nhân Viên :" textAlignment="CENTER">
+      <Label layoutX="1213.0" layoutY="28.0" prefHeight="48.0" prefWidth="66.0" text="Staff :" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Label>
    </children>

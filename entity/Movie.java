@@ -40,7 +40,7 @@ public class Movie {
 
         this.movieSelectBtn.setOnAction(event-> {
             try{
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/showtimeseat/showtimeseat.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/oldFxml/showtimeseat.fxml"));
                 Parent root = loader.load();
                 ShowtimeseatController showtimeseatController = loader.getController();
 

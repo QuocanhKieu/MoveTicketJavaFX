@@ -112,3 +112,78 @@ ImageView {
     -fx-scale-x: 1.2;
     -fx-scale-y: 1.2;
 }
+.foodDrink-imageView{
+    -fx-padding: 0 0 0 10px;
+}
+
+#qtyTbCl, #priceTbCl, #productTbCl, #imageTbCl {
+    -fx-alignment: center;
+    -fx-column-halignment: right;
+    -fx-text-alignment: right;
+    -fx-text-fill: black;
+    -fx-font-size: 22;
+    -fx-font-weight: 800;
+}
+.qty-HBox {
+    -fx-alignment: center;
+}
+.decre-btn, .incre-btn, TextField.qty-textField {
+    -fx-min-width: 38;
+    /*-fx-min-height: 35;*/
+    -fx-max-height: 35;
+    -fx-pref-height: 35;
+    -fx-border-color: grey;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-border-radius: 0 ;
+    -fx-background-color: white;
+    -fx-padding: 0;
+
+}
+.qty-textField{
+    -fx-font-size: 22;
+
+    -fx-pref-width: 60;
+    -fx-pref-height: 35;
+    -fx-border-width: 1.5;
+
+    -fx-alignment: CENTER;
+}
+.decre-btn {
+    -fx-border-radius: 10 0 0 10;
+    -fx-font-size: 22;
+    -fx-border-width: 1.5 0 1.5 1.5;
+
+}
+
+.incre-btn {
+    -fx-border-radius: 0 10 10 0;
+    -fx-font-size: 22;
+    -fx-border-width: 1.5 1.5 1.5 0;
+
+}
+
+.food-rev-hb {
+    -fx-padding: 15 8 15 8;
+    -fx-border-width: 0px 0px 1px 0px;
+    -fx-border-style: dashed;
+    -fx-border-color: lightsteelblue;
+
+}
+.hb-price, .hb-order-qty, .hb-product-name {
+    -fx-font-size: 23;
+    -fx-font-weight: 800;
+    -fx-border-width: 20px;
+
+}
+.hb-price {
+    -fx-alignment: center-right;
+    -fx-pref-width: 120;
+}
+.hb-order-qty {
+    -fx-pref-width: 40;
+    -fx-alignment: center;
+}
+.hb-product-name {
+    -fx-pref-width: 180;
+}

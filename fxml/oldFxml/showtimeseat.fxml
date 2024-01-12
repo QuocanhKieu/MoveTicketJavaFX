@@ -30,7 +30,7 @@
                         </Text>
                      </children>
                      <effect>
-                        <Reflection fraction="0.68" topOpacity="0.27" />
+                        <Reflection bottomOpacity="0.01" fraction="1.0" topOpacity="0.28" />
                      </effect>
                   </Pane>
                   <Pane layoutX="246.0" layoutY="591.0" prefHeight="45.0" prefWidth="40.0" style="-fx-background-color: #ff8282; -fx-background-radius: 20 20 0 0;">
@@ -157,10 +157,13 @@
                   </ScrollPane>
                </children>
             </Pane>
-            <Hyperlink fx:id="backBtn" layoutX="60.0" layoutY="27.0" onAction="#backToMovieList" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: #2D3648;" text="&lt;&lt; Back To List" textFill="WHITE">
+            <Hyperlink fx:id="backBtn" layoutX="60.0" layoutY="27.0" onAction="#backToMovieList" prefHeight="48.0" prefWidth="117.0" style="-fx-background-color: #2D3648;" text="&lt;&lt; Back" textFill="WHITE">
                <font>
                   <Font name="System Bold Italic" size="23.0" />
                </font>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Hyperlink>
             <ToggleButton fx:id="lightMode" layoutX="1288.0" layoutY="19.0" mnemonicParsing="false" onAction="#setLightMode" prefHeight="50.0" prefWidth="60.0" style="-fx-background-color: #D9D9D9;" text="☀">
                <cursor>
@@ -182,8 +185,11 @@
                <font>
                   <Font name="System Bold Italic" size="20.0" />
                </font>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Button>
-            <Button fx:id="paymentBtn" layoutX="1364.0" layoutY="806.0" mnemonicParsing="false" onAction="#gotoPayment" style="-fx-background-color: #2D3648;" text="Food &amp; Drink &gt;&gt;" textFill="WHITE">
+            <Button fx:id="foodDrinkBtn" layoutX="1364.0" layoutY="806.0" mnemonicParsing="false" onAction="#gotoFoodDrink" style="-fx-background-color: #2D3648;" text="Food &amp; Drink &gt;&gt;" textFill="WHITE">
                <font>
                   <Font name="System Bold Italic" size="23.0" />
                </font>
