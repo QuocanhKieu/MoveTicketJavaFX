@@ -19,36 +19,68 @@
    <children>
       <Pane fx:id="rootPane" layoutY="-9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0">
          <children>
-            <Hyperlink fx:id="backBtn" layoutX="215.0" layoutY="14.0" onAction="#backToMovieList" style="-fx-background-color: rgba(0,0,0,.7);" text="&lt;  Back To List" textFill="WHITE">
+            <Hyperlink fx:id="backBtn" layoutX="177.0" layoutY="63.0" onAction="#backToMovieList" style="-fx-background-color: rgba(0,0,0,.7);" text="&lt; Back To List" textFill="WHITE">
                <font>
-                  <Font name="System Bold Italic" size="19.0" />
+                  <Font name="System Bold Italic" size="23.0" />
                </font>
+               <effect>
+                  <DropShadow />
+               </effect>
             </Hyperlink>
-            <ToggleButton fx:id="lightMode" layoutX="1278.0" layoutY="19.0" mnemonicParsing="false" onAction="#setLightMode" style="-fx-background-color: #D9D9D9;" text="☀">
+            <ToggleButton fx:id="lightMode" layoutX="1285.0" layoutY="41.0" mnemonicParsing="false" onAction="#setLightMode" prefHeight="44.0" prefWidth="59.0" style="-fx-background-color: #D9D9D9;" text="☀">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
             </ToggleButton>
-            <ToggleButton fx:id="darkMode" layoutX="1243.0" layoutY="19.0" mnemonicParsing="false" onAction="#setDarkMode" prefHeight="31.0" prefWidth="35.0" style="-fx-background-color: #D9D9D9;" text="🌙">
+            <ToggleButton fx:id="darkMode" layoutX="1220.0" layoutY="41.0" mnemonicParsing="false" onAction="#setDarkMode" prefHeight="44.0" prefWidth="59.0" style="-fx-background-color: #D9D9D9;" text="🌙">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
             </ToggleButton>
 <!--            <Button fx:id="logOutBtn" layoutX="1358.0" layoutY="12.0" mnemonicParsing="false" text="LogOut">-->
 <!--               <font>-->
 <!--                  <Font name="System Bold Italic" size="20.0" />-->
 <!--               </font>-->
 <!--            </Button>-->
-            <Label layoutX="628.0" layoutY="343.0" text="Booking Successfuly !">
+            <Label layoutX="576.0" layoutY="144.0" text="Booking Successfuly !">
                <font>
-                  <Font name="System Bold Italic" size="33.0" />
+                  <Font name="System Bold Italic" size="52.0" />
                </font>
             </Label>
-            <Label layoutX="565.0" layoutY="392.0" text="Thank You For Your Purchase !">
+            <Label layoutX="464.0" layoutY="233.0" text="Thank You For Your Purchase !">
                <font>
-                  <Font name="System Bold Italic" size="33.0" />
+                  <Font name="System Bold Italic" size="52.0" />
                </font>
             </Label>
+            <Hyperlink fx:id="backBtn1" layoutX="1403.0" layoutY="41.0" onAction="#backToMovieList" prefHeight="44.0" prefWidth="96.0" style="-fx-background-color: rgba(0,0,0,.7);" text="LogOut" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Hyperlink>
+            <ImageView fitHeight="492.0" fitWidth="422.0" layoutX="464.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/Annotation%202024-01-13%20100442.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="597.0" layoutY="329.0" prefHeight="47.0" prefWidth="406.0" text="Quét Mã QR Để Thanh Toán" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="291.0" fitWidth="276.0" layoutX="906.0" layoutY="600.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asset/5371682.png" />
+               </image>
+            </ImageView>
       <!--    <Button fx:id="seatButton" layoutX="8.0" layoutY="8.0" minHeight="50" minWidth="50" text="Seat">-->
       <!--        <font>-->
       <!--            <Font size="12.0" />-->

@@ -310,5 +310,22 @@ public class FoodDrinkController implements Initializable {
 
 
     public void gotoInvoice(ActionEvent actionEvent) {
+            try{
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("../fxml/InvoiceSummary.fxml"));
+                Parent root = loader.load();
+                InvoiceSummaryController invoiceSummaryController = loader.getController();
+
+                Stage currentStage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+                invoiceSummaryController.setState(currentStage);
+
+                currentStage.setTitle("Invoice & Summary");
+                Scene scene = new Scene(root, 1600, 900 );
+                // Load the CSS file
+                scene.getStylesheets().add(getClass().getResource("/moviebookingapp/style.css").toExternalForm());
+                currentStage.setScene(scene);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
     }
 }

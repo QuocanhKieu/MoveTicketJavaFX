@@ -65,7 +65,26 @@ public class FoodDrinkDao implements DAOInterface<FoodDrink>{
         return false; // Update failed
 
     }
+    public boolean reset() {
+        String sql = "UPDATE food_drink SET order_quantity = 0";
+        try {
+            Connector conn = Connector.getInstance();
+            PreparedStatement ps = conn.getConn().prepareStatement(sql);
 
+            // Set the parameters for the update query
+
+            int rowsUpdated = ps.executeUpdate();
+
+            // Check if any rows were affected by the update
+            if (rowsUpdated > 0) {
+                return true; // Update successful
+            }
+        } catch (Exception e) {
+            // Handle exceptions here
+            e.printStackTrace(); // Print the exception for debugging
+        }
+        return false; // Update failed
+    }
     @Override
     public boolean delete(int id) {
         return false;

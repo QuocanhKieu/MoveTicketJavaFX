@@ -16,10 +16,7 @@ import javafx.stage.Stage;
 import moviebookingapp.controllers.FoodDrinkController;
 import moviebookingapp.controllers.LoginFormController;
 import moviebookingapp.controllers.MovieListController;
-import moviebookingapp.dao.BookingReservationDAO;
-import moviebookingapp.dao.InputStreamDAO;
-import moviebookingapp.dao.SeatDAO;
-import moviebookingapp.dao.ShowTimeDAO;
+import moviebookingapp.dao.*;
 import moviebookingapp.database.Connector;
 import moviebookingapp.entity.BookingReservation;
 import moviebookingapp.entity.Movie;
@@ -665,6 +662,7 @@ public class ShowtimeseatController implements Initializable {
         try{
 //            new SeatDAO().update();
 //            new BookingReservationDAO().delete();
+//            new FoodDrinkDao().reset();
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../../fxml/food&drink.fxml"));
             Parent root = loader.load();

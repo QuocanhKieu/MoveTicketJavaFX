@@ -52,7 +52,7 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Text>
-                  <GridPane fx:id="gridPaneFSeat" gridLinesVisible="true" hgap="17.0" layoutX="14.0" layoutY="143.0" prefHeight="404.0" prefWidth="727.0" style="-fx-border-width: 5;" vgap="12.0">
+                  <GridPane fx:id="gridPaneFSeat"  hgap="17.0" layoutX="14.0" layoutY="143.0" prefHeight="404.0" prefWidth="727.0" style="-fx-border-width: 5;" vgap="12.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

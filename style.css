@@ -86,7 +86,7 @@ ImageView {
     -fx-border-color: lightsteelblue;
     -fx-padding:  8;
     -fx-vgap: 15;
-    -fx-hgap: 0;
+    /*-fx-hgap: 10;*/
     -fx-border-width: 0px 0px 5px 0px;
     -fx-border-style: dashed;
 
